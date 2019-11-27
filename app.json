@@ -1,12 +1,36 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/mine/mine",
+    "pages/more/more"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#f11",
+    "navigationBarTitleText": "Resume",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list":
+    [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/ushouye.png",
+      "selectedIconPath": "images/shouye.png"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "更多",
+        "iconPath": "images/umore.png",
+        "selectedIconPath": "images/more.png"
+      },
+      {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "images/umine.png",
+      "selectedIconPath": "images/mine.png"
+      }
+    ]
   }
 }

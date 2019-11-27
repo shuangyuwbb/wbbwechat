@@ -1,54 +1,50 @@
-//index.js
-//获取应用实例
-const app = getApp()
+const app =  getApp();
 
 Page({
-  data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
+
+    
+    data: {
+        userinfo:{}
+    },
+    //页面创建时执行
+    onLoad: function(options) {
+        
+        
+    },
+    //打印用户昵称
+    dayin:function(){
+        var that = this;
+        if(app.globalData.obj){
+        // that.setData({
+        //     userinfo:app.globalData.obj, 
+           
+        // })
+      console.log(app.globalData.obj)
+    }  
+},
+    // 页面首次渲染完毕时执行
+    onReady: function() {
+        //Do some when page ready.
+        
+    },
+     // 页面出现在前台时执行
+    onShow: function() {
+        //Do some when page show.
+        
+    },
+    //页面从前台变为后台时执行
+    onHide: function() {
+        //Do some when page hide.
+        
+    },
+    // 页面销毁时执行
+    onUnload: function() {
+        //Do some when page unload.
+        
+    },
+    //下拉刷新时执行
+    onPullDownRefresh: function() {
+        //Do some when page pull down.
+        
     }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
 })
