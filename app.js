@@ -10,13 +10,13 @@ App({
     wx.login({
 
       success: res => {
-
         console.log(res.code + "######res.code")
         if (res.code) {
-          //发起网络请求
+          // 发起网络请求
           wx.request({
             // 发送 res.code 到后台换取 openId, sessionKey, unionId
             url: 'https://lwork.online/user/wechatlogin',
+                    
             data: {
               wechatId: res.code
             },
@@ -27,7 +27,6 @@ App({
               console.log(res.data.Json)
               console.log(res.data.Json.openid)
               this.globalData.obj = res.data;
-
             }
           })
         } else {
@@ -60,7 +59,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    obj:{}
+    // obj:{}
     // openid:'',
     // sessionKey:'',
     // status:''

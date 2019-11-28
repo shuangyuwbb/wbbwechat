@@ -1,15 +1,28 @@
-const app =  getApp();
-
+// const app =  getApp();
+import {HTTP} from '../../utils/http.js'
+let http = new HTTP();
 Page({
-
-    
     data: {
-       
+       test:1
     },
     //页面创建时执行
     onLoad: function(options) {
-        
-        
+        // http.request({
+        //     // url:'classic/latest',
+        //     url:'wechatlogin',
+        //     method:'POST',
+        //     data:{
+        //         wechatId : 43986728734960
+        //         // appkey:KDLDaSADSDLWWbF
+        //     },
+        //     success: (res) => {
+        //         console.log(res.status+"jdgaseh")
+        //         // console.log(this.data.test)
+        //     },
+        //     fail: function() {
+        //         console.log(this.data.test)
+        //     }
+        // })
     },
 
     // 页面首次渲染完毕时执行
