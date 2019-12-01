@@ -9,15 +9,18 @@ Page({
     onLoad: function(options) {
         
     },
-    dayin:function(){
+    log:function(){
       http.request({
         // url:'user/wechatlogin',
         url: 'resume/myresume',
         method: 'POST',
-        // data:{
-        //     wechatId : 43986728734960
-        //     // appkey:KDLDaSADSDLWWbF
-        // },
+        data:{
+            // wechatId : 43986728734960
+            // appkey:KDLDaSADSDLWWbF
+        },
+        success:(res)=>{
+          console.log(res)
+        }
       })
     },
     // 页面首次渲染完毕时执行

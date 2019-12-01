@@ -21,8 +21,9 @@ App({
               wechatId: res.code
             },
             method: 'POST',
-            success: function (res) {
-            console.log("获取数据"+res)
+            success:(res) =>{
+              
+              console.log(res.data)
 
             }
           })
