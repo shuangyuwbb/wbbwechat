@@ -7,24 +7,19 @@ Page({
     },
     //页面创建时执行
     onLoad: function(options) {
-        // http.request({
-        //     // url:'classic/latest',
-        //     url:'wechatlogin',
-        //     method:'POST',
-        //     data:{
-        //         wechatId : 43986728734960
-        //         // appkey:KDLDaSADSDLWWbF
-        //     },
-        //     success: (res) => {
-        //         console.log(res.status+"jdgaseh")
-        //         // console.log(this.data.test)
-        //     },
-        //     fail: function() {
-        //         console.log(this.data.test)
-        //     }
-        // })
+        
     },
-
+    dayin:function(){
+      http.request({
+        // url:'user/wechatlogin',
+        url: 'resume/myresume',
+        method: 'POST',
+        // data:{
+        //     wechatId : 43986728734960
+        //     // appkey:KDLDaSADSDLWWbF
+        // },
+      })
+    },
     // 页面首次渲染完毕时执行
     onReady: function() {
         //Do some when page ready.
