@@ -1,64 +1,52 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function() {
     wx.clearStorageSync()
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-    var session_id = wx.getStorageSync('PHPSESSID');//本地取存储的sessionID
+    var session_id = wx.getStorageSync('PHPSESSID'); //本地取存储的sessionID
     if (session_id != "" && session_id != null) {
-      var header = { 'content-type': 'application/json', 'Cookie': session_id }
+      var header = {
+        'content-type': 'application/json',
+        'Cookie': session_id
+      }
     } else {
-      var header = { 'content-type':'application/json' }
-    }//先判断有没有sessionId
-    
+      var header = {
+        'content-type': 'application/json'
+      }
+    } //先判断有没有sessionId
+
 
     // 登录
     wx.login({
 
       success: res => {
         console.log(res.code + "######res.code")
-        var utils = require('util.js')
+        // var utils = require('util.js')
         if (res.code) {
 
-          // utils.NetRequest('https://lwork.online/user/wechatlogin', 
-          //   {
-          //   wechatId: res.code
-          //   },
-          //   function (res) {
-          //   console.log(res.data)
-          //   }
-          // )
           // 发起网络请求
           wx.request({
             // 发送 res.code 到后台换取 openId, sessionKey, unionId
             url: 'https://lwork.online/user/wechatlogin',
-            header: header,    
+            header: header,
             data: {
               wechatId: res.code
             },
             method: 'POST',
-<<<<<<< HEAD
-            success:(res) =>{
-              
-              console.log(res.data)
-
-=======
-            success: function (res) {
-              if(session_id==""||session_id==null){
+            success: function(res) {
+              if (session_id == "" || session_id == null) {
                 var cookie = res.header["Set-Cookie"];
-                wx.setStorageSync('PHPSESSID', cookie) 
+                wx.setStorageSync('PHPSESSID', cookie)
               }
-            
               console.log(res.data)
->>>>>>> e7d609b4c5bc3bd7c2f902ce547807af6db4dd00
             }
           })
         } else {
           console.log('登录失败！' + res.errMsg)
         }
-
       }
     })
 

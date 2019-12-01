@@ -1,3 +1,5 @@
-<text >首页</text>
-<button bind:tap="log" type='primary'>fjhsddgjgh</button>
+<view>
+<text >首页h</text>
+<button bind:tap="dayin" type='primary'>fjhsddgjgh</button>
 <text >{{userinfo}}</text>
+</view>
