@@ -43,5 +43,5 @@ function NetRequest({ url, data, success, fail=function(){}, method = "POST" }) 
 
 module.exports = {
   formatTime: formatTime,
-  NetRequest,NetRequest
+  NetRequest:NetRequest
 }

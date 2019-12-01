@@ -1,23 +1,22 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/mine/mine",
     "pages/more/more"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#f11",
     "navigationBarTitleText": "Resume",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list":
-    [
+    "list": [
       {
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "images/ushouye.png",
-      "selectedIconPath": "images/shouye.png"
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/ushouye.png",
+        "selectedIconPath": "images/shouye.png"
       },
       {
         "pagePath": "pages/more/more",
@@ -26,11 +25,12 @@
         "selectedIconPath": "images/more.png"
       },
       {
-      "pagePath": "pages/mine/mine",
-      "text": "我的",
-      "iconPath": "images/umine.png",
-      "selectedIconPath": "images/mine.png"
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/umine.png",
+        "selectedIconPath": "images/mine.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
