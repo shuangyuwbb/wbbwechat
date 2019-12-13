@@ -1,12 +1,14 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/mine/mine",
-    "pages/more/more"
+    "pages/recruit/recruit",
+    "pages/career/career",
+    "pages/data/data",
+    "pages/add-resume/add-resume"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#f11",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Resume",
     "navigationBarTextStyle": "black"
   },
@@ -14,21 +16,27 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "images/ushouye.png",
-        "selectedIconPath": "images/shouye.png"
+        "text": "简历",
+        "iconPath": "images/resume.png",
+        "selectedIconPath": "images/uresume.png"
       },
       {
-        "pagePath": "pages/more/more",
-        "text": "更多",
-        "iconPath": "images/umore.png",
-        "selectedIconPath": "images/more.png"
+        "pagePath": "pages/recruit/recruit",
+        "text": "校园招聘",
+        "iconPath": "images/recruit.png",
+        "selectedIconPath": "images/urecruit.png"
       },
       {
-        "pagePath": "pages/mine/mine",
-        "text": "我的",
-        "iconPath": "images/umine.png",
-        "selectedIconPath": "images/mine.png"
+        "pagePath": "pages/career/career",
+        "text": "职业需求",
+        "iconPath": "images/need.png",
+        "selectedIconPath": "images/uneed.png"
+      },
+      {
+        "pagePath": "pages/data/data",
+        "text": "数据分析",
+        "iconPath": "images/data.png",
+        "selectedIconPath": "images/udata.png"
       }
     ]
   },

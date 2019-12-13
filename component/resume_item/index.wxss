@@ -1,0 +1,73 @@
+.resume_item{
+  box-shadow: 0rpx 10rpx 50rpx 10rpx rgba(85, 85, 85, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin-left: 5%;
+  width: 90%;
+  height: 350rpx;
+  background-color: #fcfcfd;
+  border-radius: 25rpx;
+}
+
+.resume_img{
+  width: 181rpx;
+  height: 80%;
+  background-color: chartreuse;
+  margin-left: 32rpx;
+}
+
+.resuem_desc{
+  width: 390rpx;
+  height: 90%;
+  background-color: #fcfcfd;
+  display: flex;
+  flex-direction: column;
+  margin-left: 45rpx;
+}
+
+.resuem_desc_editor{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50rpx;
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.resuem_desc_name{
+  margin-top: 10rpx;
+  font-size:25rpx;
+}
+
+.resuem_desc_editor_dot{
+  width: 45rpx;
+  height: 10rpx;
+  margin-bottom: 8rpx;
+
+}
+.resuem_desc_date{
+  height: 50rpx;
+  width: 100%;
+  margin-top: 45rpx;
+  font-size: 18rpx;
+}
+
+.resuem_desc_work{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50rpx;
+  width: 100%;
+  margin-top: 55rpx;
+}
+.resuem_desc_work_name{
+  font-size: 25rpx;
+}
+.resuem_desc_editor_share{
+  width: 33rpx;
+  height: 33rpx;
+}

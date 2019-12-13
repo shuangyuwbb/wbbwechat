@@ -8,3 +8,11 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.global_txt{
+  font-size: 18rpx;
+  font-style: normal;
+}
+
+.global_headline{
+  font-size: 25rpx;
+}

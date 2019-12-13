@@ -1,0 +1,22 @@
+<view class="resume_item">
+  <view class="resume_img">
+    <image src="{{src}}" />
+  </view>
+  <view class="resuem_desc">
+    <view class="resuem_desc_editor">
+      <text class="resuem_desc_name global_headline">我的简历</text>
+      <r-btn bind:tap="more">
+        <image class="resuem_desc_editor_dot" src="image/more.png" slot="img" />
+      </r-btn>
+    </view>
+    <view class="resuem_desc_date">
+      <text class="global_txt">{{time}}</text>
+    </view>
+    <view class="resuem_desc_work">
+      <text class="resuem_desc_work_name">{{work}}</text>
+      <r-btn open-type="share">
+        <image class="resuem_desc_editor_share" src="image/out.png" slot="img"/>
+      </r-btn>
+    </view>
+  </view>
+</view>

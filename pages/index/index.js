@@ -5,26 +5,22 @@ import {
 let http = new HTTP();
 Page({
   data: {
-    test: 1
+    
   },
   //页面创建时执行
   onLoad: function(options) {
 
   },
-
-  dayin: function() {
-
-    http.request({
-      url: 'resume/myresume',
-      method: 'POST',
-
-      success: (res) => {
-        console.log(res)
-      }
+  addResume:function(){
+    wx.navigateTo({
+      url: '../add-resume/add-resume',
     })
-
-
   },
+
+  editer:function(){
+    console.log(222)
+  },
+ 
   // 页面首次渲染完毕时执行
   onReady: function() {
     //Do some when page ready.
@@ -49,5 +45,9 @@ Page({
   onPullDownRefresh: function() {
     //Do some when page pull down.
 
+  },
+  onShareAppMessage:function(){
+    
   }
+  
 })

@@ -1,4 +1,117 @@
-page{
-  width: 750rpx;
+
+.container{
+  width: 100%;
+  background-color: rgb(241, 240, 240);
+  position: relative;
+}
+/* 头部 */
+.header{
+  border-top: 1px solid rgb(223, 219, 219);
+  box-shadow: 0rpx 10rpx 50rpx 10rpx rgba(245, 245, 245, 0.1);
+  background-color: rgb(248, 248, 246);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 220rpx;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.add_icon{
+  margin-left: 75rpx;
+  margin-right: 30rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.add{
   height: 100%;
+}
+
+.add_headline{
+  margin-top: 70rpx;
+  display: block;
+  font-size: 25rpx;
+}
+.add_tip{
+  display: block;
+  margin-top: 35rpx;
+  font-size: 20rpx;
+}
+/* 主题内容部分 */
+.body{
+  background-color: rgb(250, 249, 245);
+  margin-top: 45rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.body_headline{
+  display: block;
+  margin-left: 70rpx;
+  line-height: 100rpx;
+  width: 750rpx;
+}
+
+.resume_item{
+  box-shadow: 0rpx 10rpx 50rpx 10rpx rgba(85, 85, 85, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin-left: 5%;
+  width: 90%;
+  height: 350rpx;
+  background-color: #fcfcfd;
+  border-radius: 25rpx;
+}
+
+.resume_img{
+  width: 181rpx;
+  height: 80%;
+  background-color: chartreuse;
+  margin-left: 32rpx;
+}
+
+.resuem_desc{
+  width: 390rpx;
+  height: 90%;
+  background-color: #fcfcfd;
+  display: flex;
+  flex-direction: column;
+  margin-left: 45rpx;
+}
+
+.resuem_desc_editor{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50rpx;
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.resuem_desc_name{
+  margin-top: 10rpx;
+  font-size:25rpx;
+}
+
+.resuem_desc_editor_dot{
+  width: 45rpx;
+  height: 10rpx;
+  margin-bottom: 8rpx;
+
+}
+.resuem_desc_date{
+  height: 50rpx;
+  width: 100%;
+  margin-top: 20rpx;
+
+}
+
+.resuem_desc_work{
+  height: 50rpx;
+  width: 100%;
+  margin-top: 80rpx;
 }

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  
+  "navigationBarTitleText": "校园招聘",
+ 
+  "enablePullDownRefresh": true
+
+}

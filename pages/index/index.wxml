@@ -1,5 +1,13 @@
-<view>
-<text >首页h</text>
-<button bind:tap="dayin" type='primary'>fjhsddgjgh</button>
-<text >{{userinfo}}</text>
+<view class="container">
+  <view class="header">
+    <image src="image/add_icon.png" class="add_icon" bind:tap="addResume" />
+    <view class="add">
+      <text class="add_headline">创建简历</text>
+      <text class="add_tip">快来创建你的简历吧!</text>
+    </view>
+  </view>
+  <view class="body">
+  <text class="body_headline">预览简历</text>
+    <r-item></r-item>
+  </view>
 </view>

@@ -1,49 +1,30 @@
 //app.js
+import {HTTP} from 'utils/http.js';
+let http = new HTTP();
 App({
   onLaunch: function() {
-    wx.clearStorageSync()
+    wx.clearStorageSync('PHPSESSID')
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-    var session_id = wx.getStorageSync('PHPSESSID'); //本地取存储的sessionID
-    if (session_id != "" && session_id != null) {
-      var header = {
-        'content-type': 'application/json',
-        'Cookie': session_id
-      }
-    } else {
-      var header = {
-        'content-type': 'application/json'
-      }
-    } //先判断有没有sessionId
-
-
+    
     // 登录
     wx.login({
 
       success: res => {
-        console.log(res.code + "######res.code")
-        // var utils = require('util.js')
         if (res.code) {
 
-          // 发起网络请求
-          wx.request({
-            // 发送 res.code 到后台换取 openId, sessionKey, unionId
-            url: 'https://lwork.online/user/wechatlogin',
-            header: header,
-            data: {
-              wechatId: res.code
-            },
-            method: 'POST',
-            success: function(res) {
-              if (session_id == "" || session_id == null) {
-                var cookie = res.header["Set-Cookie"];
-                wx.setStorageSync('PHPSESSID', cookie)
-              }
-              console.log(res.data)
-            }
-          })
+        http.request({
+          url:'user/wechatlogin',
+          method:'POST',
+          data:{
+            userAcount:res.code
+          },
+          success:(res)=>{
+            console.log(res)
+          }
+        })
         } else {
           console.log('登录失败！' + res.errMsg)
         }

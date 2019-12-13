@@ -8,5 +8,5 @@ const formatTime = date => {
 
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
-//带着sessionId进行请求，自动获取服务端返回的sessionId存入全局变量中
+
 
