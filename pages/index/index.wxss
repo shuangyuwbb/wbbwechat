@@ -1,14 +1,29 @@
+<<<<<<< HEAD
 
 .container{
   width: 100%;
   background-color: rgb(241, 240, 240);
   position: relative;
+=======
+page{
+  font-family: SimHei;
+ 
+}
+.container{
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+>>>>>>> fccf51a... 首次提交
 }
 /* 头部 */
 .header{
   border-top: 1px solid rgb(223, 219, 219);
   box-shadow: 0rpx 10rpx 50rpx 10rpx rgba(245, 245, 245, 0.1);
+<<<<<<< HEAD
   background-color: rgb(248, 248, 246);
+=======
+  /* background-color: rgb(250, 249, 245); */
+>>>>>>> fccf51a... 首次提交
   position: absolute;
   top: 0;
   width: 100%;
@@ -16,6 +31,10 @@
   display: flex;
   justify-content: left;
   align-items: center;
+<<<<<<< HEAD
+=======
+  border-bottom: 2px solid #eee;
+>>>>>>> fccf51a... 首次提交
 }
 .add_icon{
   margin-left: 75rpx;
@@ -30,7 +49,12 @@
 .add_headline{
   margin-top: 70rpx;
   display: block;
+<<<<<<< HEAD
   font-size: 25rpx;
+=======
+  font-size: 28rpx;
+  font-family: SimHei;
+>>>>>>> fccf51a... 首次提交
 }
 .add_tip{
   display: block;
@@ -39,22 +63,38 @@
 }
 /* 主题内容部分 */
 .body{
+<<<<<<< HEAD
   background-color: rgb(250, 249, 245);
   margin-top: 45rpx;
   width: 100%;
   display: flex;
+=======
+  /* background-color: rgb(250, 249, 245); */
+  margin-top: 45rpx;
+  width: 100%;
+  display: flex;
+  overflow-x:hidden;
+>>>>>>> fccf51a... 首次提交
   flex-direction: column;
 }
 
 .body_headline{
   display: block;
   margin-left: 70rpx;
+<<<<<<< HEAD
   line-height: 100rpx;
   width: 750rpx;
 }
 
 .resume_item{
   box-shadow: 0rpx 10rpx 50rpx 10rpx rgba(85, 85, 85, 0.1);
+=======
+  line-height: 94rpx;
+  width: 750rpx;
+}
+.resume_item{
+  background-color: #fcfcfc;
+>>>>>>> fccf51a... 首次提交
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -62,6 +102,7 @@
   margin-left: 5%;
   width: 90%;
   height: 350rpx;
+<<<<<<< HEAD
   background-color: #fcfcfd;
   border-radius: 25rpx;
 }
@@ -77,6 +118,28 @@
   width: 390rpx;
   height: 90%;
   background-color: #fcfcfd;
+=======
+  border-radius: 25rpx;
+  margin-bottom: 34rpx;
+  box-shadow: #e0e0e0 0px 0px 1px 1px; 
+}
+
+.resume_img{
+  width: 200rpx;
+  height: 284rpx;
+  margin-left: 32rpx;
+}
+.resume_img_str{
+  width: 200rpx;
+  height: 284rpx;
+  border-radius: 20rpx;
+  box-shadow: #ccc 0 0 2rpx 2rpx;
+
+}
+.resuem_desc{
+  width: 390rpx;
+  height: 90%;
+>>>>>>> fccf51a... 首次提交
   display: flex;
   flex-direction: column;
   margin-left: 45rpx;
@@ -88,24 +151,36 @@
   justify-content: space-between;
   align-items: center;
   height: 50rpx;
+<<<<<<< HEAD
   width: 100%;
+=======
+  width: 93%;
+>>>>>>> fccf51a... 首次提交
   margin-top: 20rpx;
 }
 
 .resuem_desc_name{
   margin-top: 10rpx;
+<<<<<<< HEAD
   font-size:25rpx;
+=======
+  font-size:30rpx;
+>>>>>>> fccf51a... 首次提交
 }
 
 .resuem_desc_editor_dot{
   width: 45rpx;
   height: 10rpx;
   margin-bottom: 8rpx;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fccf51a... 首次提交
 }
 .resuem_desc_date{
   height: 50rpx;
   width: 100%;
+<<<<<<< HEAD
   margin-top: 20rpx;
 
 }
@@ -114,4 +189,192 @@
   height: 50rpx;
   width: 100%;
   margin-top: 80rpx;
+=======
+  margin-top: 45rpx;
+  font-size: 22rpx;
+}
+
+.resuem_desc_work{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50rpx;
+  width: 93%;
+  margin-top: 55rpx;
+}
+.resuem_desc_work span{
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: left;
+}
+.resuem_desc_work_name{
+  font-size: 25rpx;
+  display: inline-block;
+  width: 235rpx;
+  border-radius: 20rpx;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 50rpx;
+
+}
+.resuem_desc_editor_share{
+  width: 45rpx;
+  height: 45rpx;
+  margin-top: 9rpx;
+  padding-left: 10rpx;
+
+}
+.pict{
+  width: 100%;
+  height: 1123rpx ;
+  text-align: center;
+ 
+}
+.pict image{
+  width: 87%;
+  height: 95%;
+  border-radius: 26rpx;
+  box-shadow: #ccc 0px 0px 2px 2px;
+}
+/* 弹出框 */
+.show-btn {
+
+  margin-top: 100rpx;
+
+  color: #22cc22;
+
+}
+
+.modal-mask {
+
+  width: 100%;
+
+  height: 100%;
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  background: #000;
+
+  opacity: 0.5;
+
+  overflow: hidden;
+
+  z-index: 9000;
+
+  color: #fff;
+
+}
+
+.modal-dialog {
+
+  width: 600rpx;
+
+  overflow: hidden;
+
+  position: fixed;
+
+  top: 50%;
+
+  left: 0;
+
+  z-index: 9999;
+
+  background: #f9f9f9;
+
+  margin: -180rpx 75rpx;
+
+  border-radius: 36rpx;
+
+}
+
+.modal-title {
+
+  padding-top: 50rpx;
+
+  font-size: 28rpx;
+
+  color: #030303;
+
+  text-align: center;
+
+}
+
+.modal-content {
+
+  padding: 50rpx 32rpx;
+
+}
+
+.modal-input {
+
+  display: flex;
+
+  background: #fff;
+
+  border: 2rpx solid #ddd;
+
+  border-radius: 4rpx;
+
+  font-size: 28rpx;
+
+}
+
+.input {
+
+  width: 100%;
+
+  height: 82rpx;
+
+  font-size: 28rpx;
+
+  line-height: 28rpx;
+
+  padding: 0 20rpx;
+
+  box-sizing: border-box;
+
+  color: #333;
+
+}
+
+input-holder {
+
+  color: #666;
+
+  font-size: 28rpx;
+
+}
+
+.modal-footer {
+
+  display: flex;
+
+  flex-direction: row;
+
+  height: 86rpx;
+
+  border-top: 1px solid #dedede;
+
+  font-size: 34rpx;
+
+  line-height: 86rpx;
+
+}
+
+
+.btn-confirm {
+
+  width: 100%;
+
+  color: #030303;
+
+  text-align: center;
+
+>>>>>>> fccf51a... 首次提交
 }

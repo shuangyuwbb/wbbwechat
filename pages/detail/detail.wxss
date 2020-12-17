@@ -1,0 +1,56 @@
+/* pages/detail/detail.wxss */
+.contain {
+  border-top: 1px solid #eeeeee;
+  width: 750rpx;
+  height: 1000rpx;
+  position: relative;
+}
+.contain .contain_items {
+  width: 100%;
+  line-height: 100rpx;
+  height: 100rpx;
+  display: flex;
+  border-bottom: 1px solid #eeeeee;
+  flex-direction: row;
+}
+.contain .contain_items .label {
+  font-size: 32rpx;
+  margin-left: 50rpx;
+  flex: 1;
+  line-height: 100rpx;
+}
+.contain .contain_items .label_date {
+  flex: 3;
+}
+.contain .contain_items .label_phone {
+  flex: 1.4;
+}
+.contain .contain_items .common {
+  flex: 1.4;
+  margin-left: 69rpx;
+}
+.contain .contain_items span {
+  color: red;
+}
+.contain .contain_items .content {
+  font-size: 32rpx;
+  flex: 4;
+  line-height: 100rpx;
+}
+.contain .contain_items .content input {
+  height: 100rpx;
+}
+.contain .btn {
+  width: 500rpx;
+  height: 70rpx;
+  position: absolute;
+  bottom: 20rpx;
+  left: -125rpx;
+  transform: translateX(50%);
+  border-radius: 35rpx;
+  overflow: hidden;
+}
+.contain .btn .submit {
+  background-color: #ccc;
+  line-height: 70rpx;
+}

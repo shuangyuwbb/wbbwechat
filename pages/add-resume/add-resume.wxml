@@ -1,3 +1,20 @@
+<<<<<<< HEAD
 
 <canvas canvas-id="demo" style="width:750rpx;height:1100rpx"></canvas>
 <button bind:tap="ddd">导出图片</button>
+=======
+<tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange"></tabs>
+<view class="content">
+    <swiper class="itemTemPic" indicator-dots="{{true}}" current="{{num}}">
+        <swiper-item wx:for="{{templatePics}}" wx:key="{{item.templateId}}"  bind:tap="useStyle">
+            <view hover-class="navigator-hover">
+                <span>{{item.templateName}}</span>
+                <image class="imgBox" src="{{baseUrl}}{{item.templatePic}}" mode="widthFix" />
+                <span class="mask" style="display:{{mask}}"></span>
+            </view>
+            <span class="itemtemDesc">{{item.templateDesc}}</span>
+            <view bind:tap="beginEdit" data-index="{{item.templateId}}" class="btnEdit" style="display:{{display}}">创建</view>
+        </swiper-item>
+    </swiper>
+</view>
+>>>>>>> fccf51a... 首次提交

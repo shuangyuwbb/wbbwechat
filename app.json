@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/recruit/recruit",
+<<<<<<< HEAD
     "pages/career/career",
     "pages/data/data",
     "pages/add-resume/add-resume"
@@ -19,10 +20,40 @@
         "text": "简历",
         "iconPath": "images/resume.png",
         "selectedIconPath": "images/uresume.png"
+=======
+    "pages/data/data",
+    "pages/message/message",
+    "pages/add-resume/add-resume",
+    "pages/bind/bind",
+    "pages/edit/edit",
+    "pages/detail/detail",
+    "pages/add-item/item",
+    "pages/preview/preview",
+    "pages/Rdetails/Rdetails",
+    "pages/bind_school/school",
+    "pages/detailmsg/detailmsg"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Resume",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "selectedColor": "#9c9c9c",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "简历制作",
+        "iconPath": "images/resume1.png",
+        "selectedIconPath": "images/resume2.png"
+>>>>>>> fccf51a... 首次提交
       },
       {
         "pagePath": "pages/recruit/recruit",
         "text": "校园招聘",
+<<<<<<< HEAD
         "iconPath": "images/recruit.png",
         "selectedIconPath": "images/urecruit.png"
       },
@@ -31,14 +62,34 @@
         "text": "职业需求",
         "iconPath": "images/need.png",
         "selectedIconPath": "images/uneed.png"
+=======
+        "iconPath": "images/recruit1.png",
+        "selectedIconPath": "images/recruit2.png"
+>>>>>>> fccf51a... 首次提交
       },
       {
         "pagePath": "pages/data/data",
         "text": "数据分析",
+<<<<<<< HEAD
         "iconPath": "images/data.png",
         "selectedIconPath": "images/udata.png"
       }
     ]
   },
   "sitemapLocation": "sitemap.json"
+=======
+        "iconPath": "images/data1.png",
+        "selectedIconPath": "images/data2.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "我的消息",
+        "iconPath": "images/mes1.png",
+        "selectedIconPath": "images/mes2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "debug": false
+>>>>>>> fccf51a... 首次提交
 }

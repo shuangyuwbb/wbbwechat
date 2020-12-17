@@ -1,0 +1,19 @@
+<!-- pages/bind_school/school.wxml -->
+<view class="contain">
+    <view class="search">
+        <view class="searchinput">
+            <input type="text" value="{{school}}" placeholder="搜索" confirm-type="search" bindinput="getInputValue" />
+            <span class="icon">
+                <image class="" src="../../images/search.png" />
+            </span>
+        </view>
+        <view class="finish" bind:tap="bind">
+            <image src="../../images/finish.png" />
+        </view>
+    </view>
+    <block wx:for="{{school_name}}" wx:key="item.schoolId">
+        <view class="school_name" data-text="{{item.schoolName +':'+ item.schoolId}}" bind:tap="changeSchool">{{item.schoolName}}</view>
+    </block>
+    <view class="txt">绑定学校后可查看校内职业招聘，社团活动，工作室招新等内容</view>
+    <view class="tip">注意：绑定学校后将无法更改</view>
+</view>

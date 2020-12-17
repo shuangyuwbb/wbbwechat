@@ -1,0 +1,19 @@
+<!--pages/add-item/item.wxml-->
+<view class="content_wrap">
+    <view class="content" wx:for="{{array}}" wx:key="">
+        <view class="index" >
+            {{index+1}}.
+        </view>
+        <input class="txt" type="text" data-idx="{{index}}" value="{{inputVal[index]}}" bindinput="getInputVal"/>
+        <view class="icon" bind:tap="delInput" data-idx="{{index}}">
+        <image class="icon" src="../../images/remove.png"  lazy-load="false" binderror="" bindload="">
+        </image>
+        </view>
+    </view>
+    <view class="addBtn" bind:tap="addItem">
+        {{addExperience}}
+    </view>
+    <view class="btn">
+        <button type="primary" bind:tap="save">确定</button>
+    </view>
+</view>

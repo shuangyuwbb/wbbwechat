@@ -1,0 +1,13 @@
+/* pages/detailmsg/detailmsg.wxss */
+.container_wrap{
+    width: 100%;
+    height: 100%;
+
+}
+.content{
+    width: 80%;
+    height: 100%;
+    padding: 30rpx 20rpx;
+    margin: 0 auto;
+    margin-top: 90rpx;
+}

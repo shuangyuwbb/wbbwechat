@@ -1,1 +1,56 @@
+<<<<<<< HEAD
 /* pages/more/more.wxss */
+=======
+ec-canvas {
+  width: 100%;
+  height: 90vh;
+}
+.container_wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container_wrap .searchinput {
+  z-index: 999;
+  height: 50rpx;
+  width: 580rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 33rpx;
+  justify-content: center;
+  position: relative;
+}
+.container_wrap .searchinput input {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+.container_wrap .searchinput .icon {
+  position: absolute;
+  right: 14rpx;
+  top: 5rpx;
+}
+.container_wrap .searchinput .icon image {
+  width: 45rpx;
+  height: 45rpx;
+}
+.container_wrap .boxTag {
+  width: 574rpx;
+  box-shadow: #ccc 0 0 2rpx 2rpx;
+}
+.container_wrap .boxTag .value_item {
+  padding: 5rpx;
+}
+.container_wrap .box {
+  width: 750rpx;
+}
+.container_wrap .box .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+}
+>>>>>>> fccf51a... 首次提交

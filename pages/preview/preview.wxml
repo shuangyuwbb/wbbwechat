@@ -1,0 +1,30 @@
+<!-- pages/preview/preview.wxml -->
+<view class="preview_container">
+    <!-- 上面预览 -->
+    <swiper class="preview" indicator-dots="{{true}}">
+        <swiper-item class="" wx:for="{{resume_content.resumePic}}" wx:key=""  bind:tap="changeStyle">
+            <image class="imgda" wx:if="{{!flag}}" src="{{baseUrl}}{{item}}" />
+            <view wx:if="{{flag}}" class="pre_img" hover-stop-propagation="false">
+                <image src="{{baseUrl}}{{item}}" />
+                <!-- <view class="edit" style="display:{{display}}" bind:tap="startEdit">编辑</view>
+                <span class="mask" style="display:{{mask}}"></span> -->
+            </view>
+        </swiper-item>
+    </swiper>
+    <!-- 下面样式 -->
+    <view class="bottom_wrap" wx:if="{{flag}}">
+        <view class="pr" bind:tap="prev">
+            <image class="" src="../../images/prev.png" />
+        </view>
+        <scroll-view scroll-with-animation='true' class="" scroll-x="true" bindscroll="bindscroll" scroll-left="{{scrollLeft}}">
+            <view class="content_wrap">
+                <view class="content_item" wx:for="{{style}}" wx:key="{{item.styleId}}" bind:tap="handlePreview" data-index="{{item.styleId}}">
+                    <image src="{{baseUrl}}{{item.stylePic}}" mode="aspectFit|aspectFill|widthFix" />
+                </view>
+            </view>
+        </scroll-view>
+        <view class="lt pr" bind:tap="last">
+            <image class="" src="../../images/last.png" />
+        </view>
+    </view>
+</view>

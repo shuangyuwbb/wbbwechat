@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "usingComponents": {},
   
     "navigationBarBackgroundColor": "#000000",
@@ -8,4 +9,10 @@
     "backgroundTextStyle": "dark",
     "enablePullDownRefresh": false
   
+=======
+  "usingComponents": {
+      "ec-canvas": "../../components/ec-canvas/ec-canvas"
+  },
+  "navigationBarTitleText": "数据分析"
+>>>>>>> fccf51a... 首次提交
 }

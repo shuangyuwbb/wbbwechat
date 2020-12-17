@@ -1,0 +1,139 @@
+.contain {
+  width: 750rpx;
+  height: 1000rpx;
+}
+.contain .header_wrap {
+  border-top: 1px solid #eeeeee;
+  height: 325rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.contain .header_wrap .icon_wrap {
+  flex: 2;
+}
+.contain .header_wrap .icon_wrap .icon {
+  width: 180rpx;
+  height: 280rpx;
+  border-radius: 25rpx;
+  border: 1rpx solid #ccc;
+  margin-left: 50rpx;
+  margin-top: 50rpx;
+  overflow: hidden;
+}
+.contain .header_wrap .icon_wrap .icon image {
+  width: 100%;
+  height: 100%;
+}
+.contain .header_wrap .icon_wrap .icon .cha {
+  position: absolute;
+  right: 504rpx;
+  top: 31rpx;
+  color: red;
+  font-size: 40rpx;
+  width: 50rpx;
+  text-align: center;
+}
+.contain .header_wrap .name_wrap {
+  flex: 3;
+}
+.contain .header_wrap .name_wrap .comm {
+  margin: 0 auto;
+  width: 83%;
+  height: 50rpx;
+  border: 1rpx solid #cccccc;
+  border-radius: 15rpx;
+  text-align: center;
+}
+.contain .header_wrap .name_wrap .resume_name {
+  margin-top: 125rpx;
+}
+.contain .header_wrap .name_wrap .work_name {
+  margin-top: 50rpx;
+}
+.contain .header_wrap .name_wrap .boxTag {
+  box-shadow: #ccc 0 0 2rpx 2rpx;
+  margin-top: 10rpx;
+}
+.contain .header_wrap .save_wrap {
+  flex: 1;
+}
+.contain .header_wrap .save_wrap .save {
+  width: 40rpx;
+  height: 40rpx;
+}
+.contain .header_wrap .save_wrap .save image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.contain .header_wrap .save_wrap .resume_name {
+  margin-top: 125rpx;
+}
+.contain .header_wrap .save_wrap .work_name {
+  margin-top: 60rpx;
+}
+.contain .save {
+  border-bottom: 1px solid #eeeeee;
+  margin-top: 45rpx;
+}
+.contain .save .txt {
+  font-size: 32rpx;
+  margin-right: 35rpx;
+}
+.contain .content_wrap .content_items {
+  display: flex;
+  align-items: center;
+  height: 85rpx;
+  border-bottom: 1px solid #eeeeee;
+}
+.contain .content_wrap .content_items .items_text {
+  width: 87%;
+  margin-left: 50rpx;
+  border-left: 5px solid #eeeeee;
+  font-size: 32rpx;
+  height: 40rpx;
+}
+.contain .content_wrap .content_items .items_text .txt {
+  margin-left: 20rpx;
+}
+.contain .content_wrap .content_items .items_text image {
+  width: 14rpx;
+  height: 26rpx;
+  float: right;
+}
+.contain .content_wrap .content_items .items_text .img {
+  width: 26rpx;
+  height: 14rpx;
+  margin-top: 8rpx;
+}
+.contain .content_wrap .content_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 85rpx;
+  border-bottom: 1px solid #eeeeee;
+}
+.contain .content_wrap .content_item .item_text {
+  width: 85%;
+  margin-left: 75rpx;
+  font-size: 32rpx;
+  height: 40rpx;
+}
+.contain .content_wrap .content_item .item_text .txt {
+  margin-left: 20rpx;
+}
+.contain .content_wrap .content_item .item_text image {
+  width: 14rpx;
+  height: 26rpx;
+  float: right;
+}
+.contain .btn {
+  background-color: #ccc;
+  width: 650rpx;
+  margin-left: 50rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  border-radius: 15rpx;
+  margin-top: 24rpx;
+}

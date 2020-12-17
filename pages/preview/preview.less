@@ -1,0 +1,112 @@
+/* pages/preview/preview.wxss */
+.preview_container{
+    border-top: 1px solid #cccccc;
+    width: 750rpx;
+    height: 1200rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    .preview{
+        flex: 11;
+        width: 750rpx;
+        text-align: center;
+        margin-top: 30rpx;
+        .imgda{
+            width: 100%;
+            height: 100%;
+        }
+        .mask{
+            position: absolute;
+            top: 0;
+            left: 30px;
+            width: 315px;
+            height: 90%;
+            background: rgba(0, 0, 0, 0.67);
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .pre_img{
+            
+            height: 840rpx;
+            // margin-top: 10rp;
+            width: 625rpx;
+            box-shadow: #ccc 0px 0px 2px 2px;
+            border-top: 4rpx solid #ccc;
+            border-radius: 30rpx;
+            margin: 0 auto;
+            overflow: hidden;
+            image{
+                height: 100%;
+                width: 100%;
+            }
+            .edit{
+                background-color: #fff;
+                color: rgb(0, 0, 0);
+                width: 100rpx;
+                position: absolute;
+                left: 50%;
+                top: 40%;
+                transform: translateX(-40rpx);
+                border-radius: 25rpx;
+                z-index: 999;
+                line-height: 55rpx;
+            }
+            
+        }
+    }
+    .dots{
+        height: 40rpx;
+        margin-top: 20rpx;
+        width: 100%;
+        .img_dots{
+            width: 65rpx;
+            height: 15rpx;
+        }
+    }
+    .bottom_wrap{
+        flex:3;
+        // background-color: #cccccc;
+        text-align: center;
+        // margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        .pr{
+            width: 52rpx;
+
+            margin: auto 0;
+            image{
+                width: 15rpx;
+                height: 40rpx;
+            }
+        }
+        
+        scroll-view{
+            height: 100%;
+            width: 640rpx;
+            
+            .content_wrap{
+                height:228rpx; 
+                width:100%; 
+                display: flex;
+                
+                
+                .content_item{
+                    width: 142rpx;
+                    height: 200rpx; 
+                    flex: 1;
+                    margin:auto 10rpx;
+                    box-shadow: #ccc 0px 0px 2px 2px;
+                    // box-shadow: 2rpx 2rpx 0 0 ;
+                    
+                    image{
+                        // border-radius: 15rpx;
+                        width: 140rpx; 
+                        height: 200rpx;
+                    }
+                }
+            }
+        }
+    }
+}

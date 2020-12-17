@@ -1,13 +1,65 @@
 <view class="container">
   <view class="header">
+<<<<<<< HEAD
     <image src="image/add_icon.png" class="add_icon" bind:tap="addResume" />
+=======
+    <image src="../../images/add.png" class="add_icon" bind:tap="addResume" />
+>>>>>>> fccf51a... 首次提交
     <view class="add">
       <text class="add_headline">创建简历</text>
       <text class="add_tip">快来创建你的简历吧!</text>
     </view>
   </view>
   <view class="body">
+<<<<<<< HEAD
   <text class="body_headline">预览简历</text>
     <r-item></r-item>
+=======
+    <text class="body_headline">预览简历</text>
+    <block wx:if="{{resume_content.length>0}}">
+      <view wx:for="{{resume_content}}" wx:key="{{item.resumeId}}">
+        <view class="resume_item" data-id='{{item.resumeId}}' bind:tap="previewResume">
+          <view class="resume_img">
+            <image class="resume_img_str" src="{{baseUrl}}{{item.resumePic[0]}}" />
+          </view>
+          <view class="resuem_desc">
+            <view class="resuem_desc_editor">
+              <text class="resuem_desc_name global_headline">{{item.resumeName}}</text>
+              <r-btn catch:tap="more" data-id='{{item.resumeId}}'>
+                <image class="resuem_desc_editor_dot" src="../../images/more.png" slot="img" />
+              </r-btn>
+            </view>
+            <view class="resuem_desc_date">
+              <text class="global_txt">{{item.resumeCreatetime}}</text>
+            </view>
+            <view class="resuem_desc_work">
+              <view class="resuem_desc_work_name">{{item.jobTag}}</view>
+              <span catch:tap="editResume" data-id="{{item.resumeId}}">
+                <image class="resuem_desc_editor_share" src="../../images/edit.png" slot="img" />
+              </span>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="pict">
+        <image src="{{src}}" />
+      </view>
+    </block>
+  </view>
+  <!-- dialog弹出框 -->
+  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-content">
+      <view class="modal-input">
+        <input placeholder-class="input-holder" value="{{url}}" class="input"></input>
+      </view>
+      <view class="modal-title">复制此url可到浏览器中下载简历pdf</view>
+    </view>
+    <view class="modal-footer">
+      <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">复制</view>
+    </view>
+>>>>>>> fccf51a... 首次提交
   </view>
 </view>

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "r-btn": "/components/image_btn/index"
+  }
+}

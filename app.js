@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //app.js
 import {HTTP} from 'utils/http.js';
 let http = new HTTP();
@@ -55,4 +56,50 @@ App({
     userInfo: null,
   }
 
+=======
+import {baseUrl} from './utils/util'
+App({
+  onLaunch: function (ops) {
+    if (ops.scene == 1044) {
+      console.log(ops.shareTicket)
+    }
+    // 展示本地存储能力
+    wx.removeStorageSync("PHPSESSID")
+    wx.removeStorageSync("logs");
+
+  },
+  getAuthKey() {
+  
+    return new Promise(function (resolve, reject) {
+        // 调用登录接口
+        wx.login({
+          success: res =>{
+            if (res.code) {
+              wx.request({
+                url: baseUrl + '/user/wechatlogin',
+                method: 'POST',
+                data: {
+                  wechatId: res.code
+                },
+                success: res => {
+                  if (!res.data.status) {
+                    reject()
+                    myshowToast(res.data.error)
+                    wx.navigateTo({
+                      url: '../bind/bind',
+                    })
+                  }else{
+                    let cookie = res.header["Set-Cookie"]
+                    wx.setStorageSync("PHPSESSID", cookie)
+                    resolve(res)
+                  }
+                }
+              })
+            } 
+            
+          }
+        })
+    });
+  }
+>>>>>>> fccf51a... 首次提交
 })

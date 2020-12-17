@@ -1,0 +1,150 @@
+<!-- pages/detail/detail.wxml -->
+<view class="contain">
+        <form bindsubmit="save">
+                <block wx:for="{{baseInfo1}}" wx:key="{{item.fieldId}}">
+                        <view class="contain_items" wx:if="{{item.fieldId==5}}">
+                                <view class="label label_phone">
+                                        <span>*</span>
+                                        电话号码
+                                </view>
+                                <view class="content">
+                                        <input name="{{item.fieldId}}" type="number" maxlength="11" bindchange="inputPhoneNum" value="{{item.fieldContent}}" />
+                                </view>
+                        </view>
+                        <view class="contain_items" wx:elif="{{item.fieldId==2}}">
+                                <view class="label">
+                                        <span>*</span>
+                                        姓名
+                                </view>
+                                <view class="content">
+                                        <input name="{{item.fieldId}}" bindblur="inputEmpty" data-text="姓名不能为空" bindinput="inputname" value="{{item.fieldContent}}" />
+                                </view>
+                        </view>
+                        <view class="contain_items" wx:elif="{{item.fieldId==11}}">
+                                <view class="label">
+                                        <span>*</span>
+                                        邮箱
+                                </view>
+                                <view class="content">
+                                        <input name="{{item.fieldId}}" bindchange="inputmail" value="{{item.fieldContent}}" />
+                                </view>
+                        </view>
+                        <view class="contain_items" wx:elif="{{item.fieldId==4}}">
+                                <view class="label">
+                                        <span>*</span>
+                                        性别
+                                </view>
+                                <view class="content">
+                                        <picker class="" name="{{item.fieldId}}" mode="selector" range="{{list}}" value="{{list[selectedIndex]}}" bindchange="change">
+                                                <view>{{list[selectedIndex]}}</view>
+                                        </picker>
+                                </view>
+                        </view>
+                        <view class="contain_items" wx:elif="{{item.fieldId==3}}">
+                                <view class="label">
+                                        <span>*</span>
+                                        年龄
+                                </view>
+                                <view class="content">
+                                        <input name="{{item.fieldId}}" bindblur="inputEmpty" data-text="年龄不能为空哦！" bindinput="inputage" maxlength="3" placeholder="请输入age" value="{{item.fieldContent}}" />
+                                </view>
+                        </view>
+                        <view class="contain_items" wx:elif="{{item.fieldId==23}}">
+                                <view class="label label_phone">
+                                        <span>*</span>
+                                        职业意向
+                                </view>
+                                <view class="content">
+                                        <input name="{{item.fieldId}}" bindblur="inputEmpty" data-text="职业意向不能为空！" bindinput="inputage" value="{{item.fieldContent}}" />
+                                </view>
+                        </view>
+                        <view class="contain_items" wx:if="{{item.fieldId==13}}">
+                                <view class="label">
+                                        <span>*</span>
+                                        学校
+                                </view>
+                                <view class="content">
+                                        <input name="{{item.fieldId}}" bindblur="inputEmpty" data-text="学校必填项" maxlength="11" value="{{item.fieldContent}}" />
+                                </view>
+                        </view>
+                        <view class="contain_items" wx:elif="{{item.fieldId==14}}">
+                                <view class="label">
+                                        <span>*</span>
+                                        专业
+                                </view>
+                                <view class="content">
+                                        <input name="{{item.fieldId}}" bindblur="inputEmpty" data-text="专业必填项" value="{{item.fieldContent}}" />
+                                </view>
+                        </view>
+                        <view class="contain_items" wx:elif="{{item.fieldId==15}}">
+                                <view class="label">
+                                        <span>*</span>
+                                        学历
+                                </view>
+                                <view class="content">
+                                        <picker class="" name="{{item.fieldId}}" mode="selector" range="{{listEdu}}" value="{{listEdu[selectedIndex]}}" bindchange="change">
+                                                <view>{{listEdu[selectedIndex]}}</view>
+                                        </picker>
+                                </view>
+                        </view>
+                        <view class="contain_items" wx:elif="{{item.fieldId==16}}">
+                                <view class="label label_date" bind:tap="selectDate">
+                                        <span>*</span>
+                                        毕业时间
+                                </view>
+                                <view class="content">
+                                        <picker class="" mode="date" fields="month" start="{{startDate}}" end="{{endDate}}" value="{{item.fieldContent}}" bindchange="startDate">
+                                                <view>{{selectedStartDate}}</view>
+                                        </picker>
+                                </view>
+                                <view class="content">
+                                        <picker class="" mode="date" fields="month" start="{{startDate}}" end="{{endDate}}" bindchange="endDate">
+                                                <view>{{selectedEndDate}}</view>
+                                        </picker>
+                                </view>
+                        </view>
+                        <view class="contain_items" wx:elif="{{item.fieldId==17}}">
+                                <view class="label">
+                                        <span>*</span>
+                                        绩点
+                                </view>
+                                <view class="content">
+                                        <input name="{{item.fieldId}}" value="{{item.fieldContent}}" />
+                                </view>
+                        </view>
+                        <view class="contain_items" wx:if="{{item.fieldId==24}}">
+                                <view class="label label_phone">
+                                        <span>*</span>
+                                        期望薪资
+                                </view>
+                                <view class="content">
+                                        <input name="{{item.fieldId}}" bindblur="inputEmpty" data-text="期望薪资必填项哦！" value="{{item.fieldContent}}" />
+                                </view>
+                        </view>
+                        <view class="contain_items" wx:elif="{{item.fieldId==25}}">
+                                <view class="label common">期待作息</view>
+                                <view class="content">
+                                        <input name="{{item.fieldId}}" value="{{item.fieldContent}}" />
+                                </view>
+                        </view>
+                        <view class="contain_items" wx:elif="{{item.fieldId==26}}">
+                                <view class="label label_phone">
+                                        <span>*</span>
+                                        意向城市
+                                </view>
+                                <view class="content">
+                                        <input name="{{item.fieldId}}" bindblur="inputEmpty" data-text="意向城市必填项哦！" value="{{item.fieldContent}}" />
+                                </view>
+                        </view>
+                        <view class="contain_items" wx:elif="{{item.fieldId==27}}">
+                                <view class="label common">求职类型</view>
+                                <view class="content">
+                                        <input name="{{item.fieldId}}" placeholder="" value="{{item.fieldContent}}" />
+                                </view>
+                        </view>
+                </block>
+                <view class="btn">
+                        <button class='submit' formType="submit" type="primary">保存</button>
+                </view>
+        </form>
+</view>

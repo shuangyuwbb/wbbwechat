@@ -1,2 +1,38 @@
+<<<<<<< HEAD
 <!--pages/more/more.wxml-->
 <text>pages/more/more.wxml</text>
+=======
+<view class="container_wrap" hover-class="none" hover-stop-propagation="false">
+    <view class="searchinput">
+        <input type="text" value="{{jobTagName}}" placeholder="搜索" confirm-type="search" bindblur="inputWatch" bindinput="getInputValue" />
+        <span class="icon">
+            <image class="" src="../../images/search.png" />
+        </span>
+    </view>
+    <view class="boxTag" wx:if="{{job_tag.length>0}}">
+        <block wx:for="{{job_tag}}" wx:key="{{item.jobTagId}}">
+            <view class="value_item" data-text="{{item.jobTag +':'+ item.jobTagId}}" bind:tap="chooseJobTag">
+                {{item.jobTag}}
+            </view>
+        </block>
+    </view>
+    <view class="box">
+        <!-- <button bindtap="getData">切换</button> -->
+        <view class="container">
+            <!-- 薪资折线图 -->
+            <ec-canvas id="mychart1" canvas-id="mychart-line" ec="{{ ec1 }}"></ec-canvas>
+            <!-- 学历要求饼状图 -->
+            <ec-canvas id="mychart2" canvas-id="mychart-line" ec="{{ ec2 }}"></ec-canvas>
+            <!-- 学历要求饼状图 -->
+            <ec-canvas id="mychart3" canvas-id="mychart-line" ec="{{ ec3 }}"></ec-canvas>
+            <!-- 学历要求饼状图 -->
+            <ec-canvas id="mychart4" canvas-id="mychart-line" ec="{{ ec4 }}"></ec-canvas>
+            <!-- 学历要求饼状图 -->
+            <!-- <ec-canvas id="mychart5" canvas-id="mychart-line" ec="{{ ec5 }}"></ec-canvas> -->
+        </view>
+    </view>
+    <!-- 热门技能扇形图 -->
+    <!-- 工作经验柱状图 -->
+    <!-- 热门城市地图 -->
+</view>
+>>>>>>> fccf51a... 首次提交

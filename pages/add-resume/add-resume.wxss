@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* pages/screenshot/screenshot.wxss */
 .btn-w{
   text-align: center;
@@ -71,4 +72,69 @@
   float:left;
   width:50%;
   text-align: center;
+=======
+.content {
+  height: 1100rpx;
+}
+.content .itemTemPic {
+  height: 100%;
+  text-align: center;
+  height: 1100rpx;
+}
+.content .itemTemPic swiper-item {
+  height: 100%;
+  width: 100%;
+}
+.content .itemTemPic swiper-item view {
+  margin: 0 auto;
+  border-radius: 20rpx;
+  margin-top: 20rpx;
+  height: 89%;
+  box-shadow: #ccc 0px 0px 2px 2px;
+  width: 640rpx;
+}
+.content .itemTemPic swiper-item view span {
+  display: inline-block;
+  margin-top: 10rpx;
+}
+.content .itemTemPic swiper-item view .imgBox {
+  margin-top: 20rpx;
+  height: 100%;
+  width: 640rpx;
+}
+.content .itemTemPic swiper-item view .mask {
+  position: absolute;
+  top: 11rpx;
+  left: 56rpx;
+  width: 640rpx;
+  height: 89%;
+  background: rgba(0, 0, 0, 0.67);
+  border-radius: 20rpx;
+  justify-content: center;
+  align-items: center;
+}
+.content .itemTemPic swiper-item span {
+  font-size: 32rpx;
+  color: #000;
+}
+.content .itemTemPic swiper-item .itemtemDesc {
+  display: inline-block;
+  margin: 16rpx 0;
+  font-size: 24rpx;
+}
+.content .itemTemPic swiper-item .btnEdit {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  transform: translateX(-50%);
+  width: 124rpx;
+  height: 57rpx;
+  line-height: 53rpx ;
+  background-color: #ccc;
+  border-radius: 20rpx;
+}
+.content .itemTemPic swiper-item .active {
+  background-color: rgba(255, 255, 255, 0.5);
+>>>>>>> fccf51a... 首次提交
 }

@@ -1,0 +1,82 @@
+<!-- pages/edit/edit.wxml -->
+<view class="contain">
+    <view class="header_wrap">
+        <view class="icon_wrap">
+            <view class="icon" bind:tap="chooseImage">
+                <image src="{{src}}" />
+                <span class="cha" wx:if="{{flag}}" catch:tap="removePict">X</span>
+            </view>
+        </view>
+        <view class="name_wrap">
+            <view class="resume_name comm">
+                <input type="text" value="{{resumeName}}" bindblur="getResumeName" />
+            </view>
+            <view class="work_name comm">
+                <input class="" value="{{jobTag}}" placeholder="--选择工作标签--" bindinput="searchJobTag" />
+                <view class="boxTag" wx:if="{{job_tag.length>0}}">
+                    <view wx:for="{{job_tag}}" wx:key="{{item.jobTagId}}">
+                    <view class=""  hover-stop-propagation="false" bind:tap="chooseTag" data-text="{{item.jobTag +':'+ item.jobTagId}}">
+                        {{item.jobTag}}
+                    </view>
+                </view>
+                </view>
+            </view>
+        </view>
+        <view class="save_wrap">
+            <view class="save resume_name" hover-stop-propagation="false" bind:tap="saveResumeName">
+                <image src="../../images/finish.png" />
+            </view>
+            <view class="save work_name" hover-stop-propagation="false" bind:tap="saveJobTag">
+                <image src="../../images/finish.png" />
+            </view>
+        </view>
+    </view>
+    <view class="save">
+        
+    </view>
+    <view class="content_wrap">
+        <view class="content_items">
+            <view class="items_text" bind:tap="editBasicInfo">
+                <text class="txt">基本信息</text>
+                <image src="{{pict}}" alt="" />
+            </view>
+        </view>
+        <view class="content_items">
+            <view class="items_text" bind:tap="editEduDetail">
+                <text class="txt">教育经历</text>
+                <image src="{{pict}}" alt="" />
+            </view>
+        </view>
+        <view class="content_items">
+            <view class="items_text" bind:tap="editJobSum">
+                <text class="txt">求职总结</text>
+                <image src="{{pict}}" alt="" />
+            </view>
+        </view>
+        <view class="content_items">
+            <view class="items_text">
+                <text class="txt">个人经历</text>
+                <image class="img" src="{{pict1}}" alt="" />
+            </view>
+        </view>
+        <view class="content_item" wx:for="{{experanceList}}" wx:key="{{item}}">
+            <view class="item_text" bind:tap="addItem" data-field="{{item}}" wx:if="{{item==18}}">
+                <text class="txt">项目经历</text>
+                <image src="../../images/uexpand.png" alt="" />
+            </view>
+            <view class="item_text" bind:tap="addItem" data-field="{{item}}" wx:elif="{{item==19}}">
+                <text class="txt">荣誉奖章</text>
+                <image src="../../images/uexpand.png" alt="" />
+            </view>
+            <view class="item_text" bind:tap="addItem" data-field="{{item}}" wx:elif="{{item==20}}">
+                <text class="txt">技能掌握</text>
+                <image src="../../images/uexpand.png" alt="" />
+            </view>
+            <view class="item_text" bind:tap="addItem" data-field="{{item}}" wx:elif="{{item==21}}">
+                <text class="txt">实习经历</text>
+                <image src="../../images/uexpand.png" alt="" />
+            </view>
+        </view>
+    </view>
+    <view class="btn" bind:tap="save">保存</view>
+</view>

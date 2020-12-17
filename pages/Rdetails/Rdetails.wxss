@@ -1,0 +1,393 @@
+/* pages/Rdetails/Rdetails.wxss */
+/**
+ * author: Di (微信小程序开发工程师)
+ * organization: WeAppDev(微信小程序开发论坛)(http://weappdev.com)
+ *               垂直微信小程序开发交流社区
+ * 
+ * github地址: https://github.com/icindy/wxParse
+ * 
+ * for: 微信小程序富文本解析
+ * detail : http://weappdev.com/t/wxparse-alpha0-1-html-markdown/184
+ */
+.wxParse {
+  margin: 0 5px;
+  font-family: Helvetica, sans-serif;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.8;
+}
+view {
+  word-break: break-all;
+  /* padding: 0 30rpx; */
+}
+.wxParse-inline {
+  display: inline;
+  margin: 0;
+}
+/*//标题 */
+.wxParse-div {
+  margin: 0;
+  padding: 0;
+}
+.wxParse-h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+.wxParse-h2 {
+  font-size: 1.5em;
+  margin: 0.75em 0;
+}
+.wxParse-h3 {
+  font-size: 1.17em;
+  margin: 0.83em 0;
+}
+.wxParse-h4 {
+  margin: 1.12em 0;
+}
+.wxParse-h5 {
+  font-size: 0.83em;
+  margin: 1.5em 0;
+}
+.wxParse-h6 {
+  font-size: 0.75em;
+  margin: 1.67em 0;
+}
+.wxParse-h1 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 0.9em;
+}
+.wxParse-h2 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0.34em;
+}
+.wxParse-h3 {
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 0.34em;
+}
+.wxParse-h4 {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 0.24em;
+}
+.wxParse-h5 {
+  font-weight: 400;
+  font-size: 13px;
+  margin-bottom: 0.14em;
+}
+.wxParse-h6 {
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 0.04em;
+}
+.wxParse-h1,
+.wxParse-h2,
+.wxParse-h3,
+.wxParse-h4,
+.wxParse-h5,
+.wxParse-h6,
+.wxParse-b,
+.wxParse-strong {
+  font-weight: bolder;
+}
+.wxParse-i,
+.wxParse-cite,
+.wxParse-em,
+.wxParse-var,
+.wxParse-address {
+  font-style: italic;
+}
+.wxParse-pre,
+.wxParse-tt,
+.wxParse-code,
+.wxParse-kbd,
+.wxParse-samp {
+  font-family: monospace;
+}
+.wxParse-pre {
+  white-space: pre;
+}
+.wxParse-big {
+  font-size: 1.17em;
+}
+.wxParse-small,
+.wxParse-sub,
+.wxParse-sup {
+  font-size: 0.83em;
+}
+.wxParse-sub {
+  vertical-align: sub;
+}
+.wxParse-sup {
+  vertical-align: super;
+}
+.wxParse-s,
+.wxParse-strike,
+.wxParse-del {
+  text-decoration: line-through;
+}
+/*wxparse-自定义个性化的css样式*/
+/*增加video的css样式*/
+.wxParse-strong,
+.wxParse-s {
+  display: inline;
+}
+.wxParse-a {
+  color: deepskyblue;
+  word-break: break-all;
+  overflow: auto;
+}
+.wxParse-video {
+  text-align: center;
+  margin: 10px 0;
+}
+.wxParse-video-video {
+  width: 100%;
+}
+.wxParse-img {
+  /*background-color: #efefef;*/
+  overflow: hidden;
+}
+.wxParse-blockquote {
+  margin: 0;
+  padding: 10px 0 10px 5px;
+  font-family: Courier, Calibri, "宋体";
+  background: #f5f5f5;
+  border-left: 3px solid #dbdbdb;
+}
+.wxParse-code,
+.wxParse-wxxxcode-style {
+  display: inline;
+  background: #f5f5f5;
+}
+.wxParse-ul {
+  margin: 20rpx 10rpx;
+}
+.wxParse-li,
+.wxParse-li-inner {
+  display: flex;
+  align-items: baseline;
+  margin: 10rpx 0;
+}
+.wxParse-li-text {
+  align-items: center;
+  line-height: 20px;
+}
+.wxParse-li-circle {
+  display: inline-flex;
+  width: 5px;
+  height: 5px;
+  background-color: #333;
+  margin-right: 5px;
+}
+.wxParse-li-square {
+  display: inline-flex;
+  width: 10rpx;
+  height: 10rpx;
+  background-color: #333;
+  margin-right: 5px;
+}
+.wxParse-li-ring {
+  display: inline-flex;
+  width: 10rpx;
+  height: 10rpx;
+  border: 2rpx solid #333;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 5px;
+}
+/*.wxParse-table{
+    width: 100%;
+    height: 400px;
+}
+.wxParse-thead,.wxParse-tfoot,.wxParse-tr{
+    display: flex;
+    flex-direction: row;
+}
+.wxParse-th,.wxParse-td{
+    display: flex;
+    width: 580px;
+    overflow: auto;
+}*/
+.wxParse-u {
+  text-decoration: underline;
+}
+.wxParse-hide {
+  display: none;
+}
+.WxEmojiView {
+  /* align-items: center; */
+}
+.wxEmoji {
+  width: 16px;
+  height: 16px;
+}
+.wxParse-tr {
+  display: flex;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+}
+.wxParse-th,
+.wxParse-td {
+  flex: 1;
+  padding: 5px;
+  font-size: 28rpx;
+  border-left: 1px solid #e0e0e0;
+  word-break: break-all;
+}
+.wxParse-td:last {
+  border-top: 1px solid #e0e0e0;
+}
+.wxParse-th {
+  background: #f0f0f0;
+  border-top: 1px solid #e0e0e0;
+}
+.wxParse-del {
+  display: inline;
+}
+.wxParse-figure {
+  overflow: hidden;
+}
+.content_wrap {
+  width: 750rpx;
+  position: absolute;
+  height: 1200rpx;
+}
+.content_wrap .content {
+  width: 100%;
+  height: 155rpx;
+  border-bottom: 1px solid #ccc;
+  margin-top: 20rpx;
+}
+.content_wrap .content .content_info {
+  width: 620rpx;
+  height: 140rpx;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 30rpx;
+}
+.content_wrap .content .content_info .icon {
+  flex: 2;
+  height: 112rpx;
+  background-color: #ccc;
+  margin-top: 20rpx;
+}
+.content_wrap .content .content_info .icon image {
+  width: 100%;
+  height: 100%;
+}
+.content_wrap .content .content_info .info {
+  flex: 9;
+}
+.content_wrap .content .content_info .info .info_name {
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.content_wrap .content .content_info .info .info_time {
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  font-size: 24rpx;
+}
+.content_wrap .content .box {
+  width: 82%;
+  margin: 0 auto;
+}
+.content_wrap .content .content_detail {
+  margin-top: 25rpx;
+}
+.content_wrap .btn {
+  position: relative;
+  width: 620rpx;
+  background-color: #ccc;
+  border-radius: 10rpx;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 70rpx;
+  bottom: -875rpx;
+}
+/* 弹出框 */
+.show-btn {
+  margin-top: 100rpx;
+  color: #22cc22;
+}
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9;
+  color: #fff;
+}
+.modal-dialog {
+  width: 600rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 35%;
+  left: 0;
+  z-index: 99;
+  background: #f9f9f9;
+  margin: -180rpx 75rpx;
+  border-radius: 36rpx;
+}
+.modal-title {
+  padding: 30rpx;
+  font-size: 28rpx;
+  color: #030303;
+  text-align: center;
+}
+.modal-content {
+  padding: 20rpx 32rpx;
+}
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+.input {
+  width: 100%;
+  height: 60rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+input-holder {
+  color: #666;
+  font-size: 28rpx;
+}
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+.btn-confirm {
+  width: 100%;
+  color: #030303;
+  text-align: center;
+}
+.select_box {
+  position: absolute;
+  left: 111rpx;
+  top: 427rpx;
+  z-index: 999;
+  width: 530rpx;
+  box-shadow: #ccc 0 0 2rpx 2rpx;
+  background-color: #EDEEEF;
+}
+.select_one {
+  padding: 5rpx;
+  border-bottom: 1px solid #ccc;
+}

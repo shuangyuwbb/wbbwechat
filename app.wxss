@@ -7,6 +7,7 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
+<<<<<<< HEAD
 } 
 .global_txt{
   font-size: 18rpx;
@@ -15,4 +16,12 @@
 
 .global_headline{
   font-size: 25rpx;
+=======
+}
+page,view, span{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0
+
+>>>>>>> fccf51a... 首次提交
 }

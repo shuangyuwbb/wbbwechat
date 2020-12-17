@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import { request } from "../../request/index"
+import { myshowToast, baseUrl } from '../../utils/util'
+
+>>>>>>> fccf51a... 首次提交
 // pages/recruit/recruit.js
 Page({
 
@@ -5,6 +11,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+<<<<<<< HEAD
 
   },
 
@@ -63,4 +70,41 @@ Page({
   onShareAppMessage: function () {
 
   }
+=======
+    school_requires: [],
+    baseUrl: baseUrl
+  },
+  // 向数据库发情请求查看是否绑定学校
+  // 代码补
+  onShow: function () {
+    this.getRecruitList()
+  },
+
+  // 获取招聘信息
+  getRecruitList() {
+    request({
+      url: 'school/info',
+    }).then((res) => {
+      if (!res.data.status) {
+        myshowToast(res.data.error,this.bindSchool())
+      } else {
+        const { school_requires } = res.data
+        this.setData({
+          school_requires
+        })
+      }
+    })
+  },
+
+  // 绑定学校
+  bindSchool(){
+    wx.navigateTo({
+      url: '../bind_school/school',
+    })
+  },
+
+  onPullDownRefresh() {
+    this.getRecruitList()
+  },
+>>>>>>> fccf51a... 首次提交
 })

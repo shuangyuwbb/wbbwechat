@@ -1,0 +1,37 @@
+<!-- pages/Rdetails/Rdetails.wxml -->
+<view class="content_wrap">
+    <view class="content">
+        <view class="content_info">
+            <view class="icon">
+                <image src="{{baseUrl}}{{requires.require.requireLogo}}" />
+            </view>
+            <view class="info">
+                <view class="info_name">{{name}}</view>
+                <view class="info_time">{{startTime}}  | {{endTime}}</view>
+            </view>
+        </view>
+        <import src="../../utils/wxParse/wxParse.wxml" />
+        <view class="box">
+            <template is="wxParse" data="{{wxParseData:requires_content.nodes}}" />
+        </view>
+    </view>
+    <!-- 弹框 -->
+    <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+    <view class="modal-dialog" wx:if="{{showModal}}">
+        <view class="modal-content">
+            <view class="modal-title">选择简历</view>
+            <view class="modal-input">
+                <input disabled="{{true}}" class="input list-msg2" bind:tap="bindShowSelect" placeholder="--请选择--" value="{{resumeName}}" />
+            </view>
+        </view>
+        <view class="modal-footer">
+            <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+        </view>
+    </view>
+    <view class="select_box" wx:if="{{select}}">
+        <view class="select_one" catch:tap="chooseResume" wx:for="{{resume_content}}" wx:key="{{item.resumeId}}" data-text="{{item.resumeId+'#'+item.resumeName}}">
+            {{item.resumeName}}
+        </view>
+    </view>
+    <view class="btn" bind:tap="showDialogBtn">投递简历</view>
+</view>

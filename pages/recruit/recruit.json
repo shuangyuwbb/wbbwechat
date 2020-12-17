@@ -1,8 +1,12 @@
 {
   "usingComponents": {},
+<<<<<<< HEAD
   
   "navigationBarTitleText": "校园招聘",
  
   "enablePullDownRefresh": true
 
+=======
+  "navigationBarTitleText": "校园招聘"
+>>>>>>> fccf51a... 首次提交
 }

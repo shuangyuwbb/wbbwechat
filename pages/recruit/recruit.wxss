@@ -1,1 +1,75 @@
+<<<<<<< HEAD
 /* pages/recruit/recruit.wxss */
+=======
+/* pages/recruit/recruit.wxss */
+.contain_wrap {
+  border-top: 1px solid #cccccc;
+  width: 750rpx;
+}
+.contain_wrap .content {
+  width: 750rpx;
+  border-bottom: 1px solid #ccc;
+}
+.contain_wrap .content .content_item {
+  width: 618rpx;
+  height: 212rpx;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.contain_wrap .content .content_item .detail {
+  display: flex;
+  flex-direction: row;
+  margin: auto 0;
+  height: 141rpx;
+  width: 100%;
+}
+.contain_wrap .content .content_item .detail .item_icon {
+  flex: 2;
+  height: 141rpx;
+  background-color: #ccc;
+}
+.contain_wrap .content .content_item .detail .item_icon image {
+  width: 100%;
+  height: 100%;
+}
+.contain_wrap .content .content_item .detail .item_info {
+  height: 141rpx;
+  flex: 5;
+  font-size: 24rpx;
+}
+.contain_wrap .content .content_item .detail .item_info .info_name {
+  margin-left: 30rpx;
+  margin-top: 12rpx;
+  font-size: 34rpx;
+}
+.contain_wrap .content .content_item .detail .item_info .info_time {
+  margin-left: 30rpx;
+  margin-top: 45rpx;
+}
+.contain_wrap .content .content_item .detail .item_writer {
+  flex: 2;
+  height: 141rpx;
+}
+.contain_wrap .content .content_item .detail .item_writer span {
+  color: #fff;
+  margin-left: 65rpx;
+  font-size: 20rpx;
+  display: block;
+  width: 64rpx;
+  line-height: 34rpx;
+  border-radius: 30rpx;
+  text-align: center;
+}
+.contain_wrap .msg_txt {
+  position: relative;
+  text-align: center;
+}
+.contain_wrap .msg_txt span {
+  display: inline-block;
+  position: relative;
+  top: 226rpx;
+  font-size: 32rpx;
+  font-style: oblique;
+}
+>>>>>>> fccf51a... 首次提交

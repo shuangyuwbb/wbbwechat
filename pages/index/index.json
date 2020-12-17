@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+<<<<<<< HEAD
     "r-item":"/component/resume_item/index"
   },
     "navigationBarBackgroundColor": "#fff",
@@ -9,4 +10,13 @@
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
   
+=======
+    "r-btn": "../../components/image_btn/index"
+  },
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "简历制作",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+>>>>>>> fccf51a... 首次提交
 }

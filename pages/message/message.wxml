@@ -1,0 +1,16 @@
+<view class="contain_wrap">
+    <block wx:if="{{reply_content.length>0}}">
+        <view class="content" wx:for="{{reply_content}}" wx:key="">
+            <view class="content_item"  bind:tap="detailmsg" data-text="{{item.replyContent}}">
+                <view class="name">{{item.replyName}}</view>
+                <view class="item_info">{{item.replyContent}}</view>
+                <view class="time">{{item.replyTime}}</view>
+            </view>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="msg_txt" >
+            <span>还没有回信哦，先去投递简历吧！</span>
+        </view>
+    </block>
+</view>

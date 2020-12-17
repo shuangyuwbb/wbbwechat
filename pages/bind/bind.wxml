@@ -1,0 +1,25 @@
+
+<view class="container_wrap" hover-class="none" >
+    <view class="box">
+        <view class="box_btn">
+            <span class="{{isShow ? 'active' : ''}}" bind:tap="changeRegTab">注册</span>
+            <span class="{{isShow ? '' : 'active'}}" bind:tap="changeLogTab">绑定</span>
+        </view>
+        
+        <view class="box_wrap" >
+            <!-- 注册表单 -->
+            <form action="" bindsubmit="submit"  wx:if="{{isShow}}">
+                <input type="text" name="userAcount" placeholder="邮箱"  bindchange="inputemail"/>
+                <input password="{{true}}" name="userPassword" placeholder="密码"/>
+                <input password="{{true}}" name="password" placeholder="确认密码"/>
+                <button type="primary" form-type="submit">注册</button>
+            </form>
+            <!-- 绑定表单 -->
+            <form class="bind_account" action="" bindsubmit="submit"  wx:else >
+                <input type="text" name="userAcount" placeholder="邮箱"/>
+                <input password="{{true}}" name="userPassword" placeholder="密码"/>
+                 <button type="primary" form-type="submit">绑定</button>
+            </form>
+        </view>  
+    </view>
+</view>

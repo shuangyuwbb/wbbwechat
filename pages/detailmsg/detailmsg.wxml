@@ -1,0 +1,3 @@
+<view class="container_wrap" > 
+    <view class="content">{{text}}</view>
+</view>

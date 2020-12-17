@@ -1,0 +1,6 @@
+/* component/image-dot.wxss */
+.btn{
+    padding: 0 !important;
+    border: none !important;
+    width: 60rpx;
+}

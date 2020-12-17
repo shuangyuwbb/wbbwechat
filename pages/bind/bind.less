@@ -1,0 +1,51 @@
+.container_wrap{
+    border-top: 1px solid #ccc;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    .box{
+        width: 80vw;
+        height: 80vh;
+        border-radius: 6%;
+        overflow: hidden;
+        .box_btn{
+            margin: 15rpx auto;
+            width: 50vw;
+            display: flex;
+            span{
+                display: inline-block;
+                flex: 1;
+                text-align: center;
+                font-size: 40rpx;
+                line-height: 80rpx;
+                color: #ccc;
+            }
+         
+        }
+        .box_wrap{
+            display: flex;
+            justify-content: center;
+            input{
+                border: 1px solid #ccc;
+                margin-top: 42rpx;
+                line-height: 65rpx;
+                height: 65rpx;
+                width: 65vw;
+            }
+            button{
+                line-height: 65rpx;
+                margin-top: 42rpx;
+                background-color: rgb(141, 143, 146) !important;
+            }
+            .bind_account{
+                input{
+                    margin-top: 50rpx;
+                }
+            }
+        }
+    }
+}
+.active{
+    color: rgb(107, 103, 103) !important;
+}

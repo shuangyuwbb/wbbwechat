@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {HTTP} from '../../utils/http.js'
 import {Paint} from '../../utils/paint/first.js'
 let paint = new Paint()
@@ -64,5 +65,100 @@ Page({
    */
   onError: function (msg) {
     
+=======
+// pages/add-resume/add-resume.js
+import { request } from '../../request/index.js'
+import { myshowToast, baseUrl } from '../../utils/util'
+const app =getApp()
+Page({
+  data: {
+    baseUrl: baseUrl,
+    tabs: [],
+    templatePics: [],
+    resumeId: '',
+    mask: 'none'
+  },
+
+  onShow() {
+    this.getStyleList(2)
+
+  },
+  // 使用该样式
+  useStyle() {
+    this.setData({
+      display: 'block',
+      mask: 'flex'
+    })
+  },
+
+  // 使用该模板创建简历
+  beginEdit(e) {
+    const templateId = e.currentTarget.dataset.index
+    request({
+      url: `resume/create/${templateId}`
+    }).then(res => {
+      if (!res.data.status) {
+        myshowToast(res.data.error)
+      } else {
+        wx.navigateTo({
+          url: `../edit/edit?resumeId=` + res.data.resume_content.resumeId
+        })
+      }
+    })
+  },
+
+  // tab切换获取对应模板
+  handleTabsItemChange(e) {
+    //获取被点击索引
+    var id = e.detail.index + 2
+    const { index } = e.detail;
+    //修改原数组
+    let { tabs } = this.data;
+    tabs.forEach((v, i) => i === index ? v.isActive = true : v.isActive = false);
+    this.setData({
+      tabs
+    })
+    request({
+      url: 'resume/template/' + id,
+    }).then(res => {
+      if (!res.data.status) {
+        myshowToast(res.data.error)
+      } else {
+        this.setData({
+          templatePics: res.data.template,
+          display: 'none',
+          mask: 'none',
+          num: 0
+        })
+      }
+    })
+  },
+
+  // 获取内容模板下面的样式模板
+  getStyleList(id) {
+    request({
+      url: 'resume/template/tags',
+    }).then(res => {
+      if (!res.data.status) {
+        myshowToast(res.data.error)
+      } else {
+        this.setData({
+          tabs: res.data.template_tag,
+          'tabs[0].isActive': true
+        })
+        request({
+          url: 'resume/template/' + id
+        }).then(res => {
+          if (!res.data.status) {
+            myshowToast(res.data.error)
+          } else {
+            this.setData({
+              templatePics: res.data.template,
+            })
+          }
+        })
+      }
+    })
+>>>>>>> fccf51a... 首次提交
   }
 })

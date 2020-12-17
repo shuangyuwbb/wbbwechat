@@ -1,3 +1,10 @@
 {
+<<<<<<< HEAD
   "usingComponents": {}
+=======
+  "usingComponents": {
+    "tabs":"../../components/tabs/tab"
+  },
+  "navigationBarTitleText": "简历模板"
+>>>>>>> fccf51a... 首次提交
 }

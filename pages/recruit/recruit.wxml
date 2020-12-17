@@ -1,2 +1,37 @@
+<<<<<<< HEAD
 <!--pages/recruit/recruit.wxml-->
 <text>pages/recruit/recruit.wxml</text>
+=======
+
+<view class="contain_wrap">
+    <block wx:if="{{school_requires.length>0}}">
+        <view class="content" wx:for="{{school_requires}}" wx:key="{{item.require.requireId}}">
+            <navigator class="" target="" url="../Rdetails/Rdetails?name={{item.require.requireName}}&startTime={{item.requireSchoolStartTime}}&endTime={{item.requireSchoolEndTime}}&requireSchoolId={{item.requireSchoolId}}" hover-class="navigator-hover" open-type="navigate">
+                <view class="content_item">
+                    <view class="detail">
+                        <view class="item_icon">
+                            <image src="{{baseUrl}}{{item.require.requireLogo}}" />
+                        </view>
+                        <view class="item_info">
+                            <view class="info_name">{{item.require.requireName}}</view>
+                            <view class="info_time">
+                                {{item.requireSchoolStartTime}} | {{item.requireSchoolEndTime}}
+                            </view>
+                        </view>
+                        <view class="item_writer">
+                            <span class="txt" style="background-color:{{item.require.requireType==2?'#ee5e7b':'#1d4fd4'}}">
+                                {{item.require.requireType == 2 ? '代发': '官方'}}
+                            </span>
+                        </view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="msg_txt">
+            <span>还没有任何招聘信息哦，先去创建简历吧！</span>
+        </view>
+    </block>
+</view>
+>>>>>>> fccf51a... 首次提交
